@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>dome</title>
+    <link rel="stylesheet" href="css/base.css">
+    <!-- <link rel="stylesheet" href="css/fontIcons.css"> -->
+    <link rel="stylesheet" href="css/common.css">
+</head>
+
+<body>
+    <header id="heads">
+        <div class="head-logo">
+            <img :src="headImg" alt="">
+            <span>{{title}}</span>
+        </div>
+        <div class="head-menu" :class="{menu}" @click="menu =! menu">
+            <span>Menu</span>
+            <p></p>
+        </div>
+        <transition name="head_nav">
+            <div class="head-nav" v-if="menu">
+                <ul class="clearfix">
+                    <li v-for="data in nav" >
+                        <div class="nav-inner">
+                            <!-- <span :class="data.icon"></span> -->
+                            <h3>{{data.title}}</h3>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </transition>
+    </header>
+    <div class="index-cont" >
+        <div class="banner" id="banner_box">
+            <div class="banner-in"></div>
+            <div class="banner-sidebar"></div>
+            <div class="banner-text">
+              <p>{{text}}</p>
+            </div>
+        </div>
+        <div class="cont-in">
+          <div class="skills-list" id="skills">
+            <div class="cont">
+              <h3>{{name}}</h3>
+              <ul class="skills-lists clearfix" >
+                <li v-for="data in skills">
+                  <p>{{data.name}}</p>
+                  <div class="skills-value">
+                    <span>{{data.value}}</span>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="transition-banner" id="restore-head">
+            <div class="tb-img">
+              <p>
+                <span>When you fall down, when you get up</span>
+                <span>조금 힘들어도 웃는 날이 와, 결국 웃는 날이 올꺼야</span>
+              </p>
+            </div>
+          </div>
+          <div class="works-list" id="works">
+            <h3>
+              <p>{{text}}</p>
+            </h3>
+            <div class="works-list-cont">
+              <a v-for="data in img"  :class="data.size">
+                <img :src="data.url" alt="">
+              </a>
+            </div>
+          </div>
+          <footer id='foot'>
+            <div class="cont">
+              <p>{{text}}</p>
+            </div>
+          </footer>
+        </div>
+    </div>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/vue.js"></script>
+    <script src="js/common.js"></script>
+</body>
+
+</html>

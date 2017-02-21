@@ -1,0 +1,186 @@
+body,
+p,
+ul,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ol,
+dd,
+dl,
+input,
+li,
+span {
+  margin: 0;
+	padding: 0;
+	list-style: none;
+	font-weight: normal;
+  -webkit-tap-highlight-color: rgba(0,0,0,0);/*清除默认点击闪动效果*/
+}
+span{
+	display:inline-block;
+}
+i{
+	font-style:normal;
+}
+a {
+	text-decoration: none;
+	color: inherit;
+	font-size: inherit;
+}
+body {
+  font: 10px / 1.14 "MeetMeInBrooklyn-Regular","Microsoft YaHei","Helvetica Neue",Helvetica,Arial,sans-serif;
+  color:#333;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -moz-font-feature-settings: 'liga', 'kern';
+	/*消除文字锯齿*/
+}
+a,
+button,
+input,
+textarea{
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+	/*-webkit-user-modify:read-write-plaintext-only;*/
+	/*可编辑模式*/
+}
+img {
+	border: 0;
+}
+* {
+	box-sizing: border-box;
+}
+body{
+	background:#fff;
+}
+span,
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+div{
+	word-break: break-all;
+	word-wrap:break-word;
+}
+input[type="submit"],
+input[type="reset"],
+input[type="button"],
+input[type="password"],
+input[type="text"],
+input[type="number"],
+input[type="search"],
+select,
+button,
+textarea {
+	-webkit-appearance: none;
+	border: none;
+	outline: 0;
+	box-shadow: none;
+	outline: none;
+}
+button{
+	background: none;
+}
+i,
+b{
+	font-style:normal;
+	font-weight:normal;
+}
+select {
+    appearance: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    -ms-appearance:none;
+    position: relative;
+}
+select::-ms-expand { display: none; }
+.clearfix:after {
+	content: ".";
+	display: block;
+	height: 0;
+	visibility: hidden;
+	clear: both;
+}
+.clearfix {
+	*zoom: 1;
+}
+/* 箭头*/
+*[arrows-zuo] {
+	width: 10px;
+	height: 10px;
+	display: block;
+	content: "";
+	border-top:2px solid #fff;
+	border-right:2px solid #fff;
+	-webkit-transform: rotate(225deg);
+	-moz-transform: rotate(225deg);
+	-ms-transform: rotate(225deg);
+	-o-transform: rotate(225deg);
+	transform: rotate(225deg);
+	position: absolute;
+	top:20px;
+}
+*[arrows-after]{
+	width: 10px;
+	height: 10px;
+	border-top:1px solid #666666;
+	border-right:1px solid #666666;
+	-webkit-transform: rotate(45deg);
+	-moz-transform: rotate(45deg);
+	-ms-transform: rotate(45deg);
+	-o-transform: rotate(45deg);
+	transform: rotate(45deg);
+	position: absolute;
+	top:41%;
+	right:0;
+}
+input[type="checkbox"],
+input[type="radio"]{
+	opacity: 0;
+}
+input[type="text"],
+input[type="password"],
+textarea{
+    cursor: text;
+}
+.fl {
+    float: left;
+    display: inline;
+}
+
+.fr {
+    float: right;
+    display: inline;
+}
+*[tac]{
+	text-align: center;
+}
+.over3line{
+    width: 100%;
+    overflow:hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -moz-line-clamp:3;
+    line-clamp:3;
+    -webkit-box-orient: vertical;
+    line-height:1.5;
+    text-overflow: ellipsis;
+}
+
+::-webkit-input-placeholder { /* WebKit browsers */
+	color: #aaaaaa;
+}
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+	color: #aaaaaa;
+}
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+	color: #aaaaaa;
+}
+:-ms-input-placeholder { /* Internet Explorer 10+ */
+	color: #aaaaaa;
+}
