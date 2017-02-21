@@ -132,9 +132,9 @@ $(document).ready(function() {
             $('.head-logo').addClass('over');
             $('.banner-sidebar').css('transform', 'rotate(0deg)');
         };
-        if (before > (changHead.offset().top - 150) && before < (backHead.offset().top - 150) || before > (worksHead.offset().top - 150)) {
+        if (before > (changHead.offset().top - 100) && before < (backHead.offset().top - 50) || before > (worksHead.offset().top - 150)) {
             $('#heads').addClass('change');
-        } else if (before > (backHead.offset().top - 150) || before < (changHead.offset().top - 150) ) {
+        } else if (before > (backHead.offset().top - 50) || before < (changHead.offset().top - 50) ) {
             $('#heads').removeClass('change');
         };
         if(before > (changHead.offset().top - 150)){
