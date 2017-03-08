@@ -5,9 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>dome</title>
+    <title>wan9cha0</title>
     <link rel="stylesheet" href="css/base.css">
-    <!-- <link rel="stylesheet" href="css/fontIcons.css"> -->
     <link rel="stylesheet" href="css/common.css">
 </head>
 
@@ -29,7 +28,6 @@
                 <ul class="clearfix">
                     <li v-for="data in nav">
                         <div class="nav-inner">
-                            <!-- <span :class="data.icon"></span> -->
                             <h3>{{data.title}}</h3>
                         </div>
                     </li>
@@ -47,10 +45,24 @@
         </div>
         <div class="cont-in">
             <div class="skills-list" id="skills">
-                <div class="cont">
+                <div class="cont" @mouseleave="showSkillsOut">
                     <h3>{{name}}</h3>
-                    <ul class="skills-lists clearfix">
-                        <li v-for="data in skills">
+                    <ul class="skills-lists clearfix" v-if="showSkillsList">
+                        <li v-for="data in skills.top" @mouseenter="showSkillsIn(data.value)">
+                            <p>{{data.name}}</p>
+                            <div class="skills-value">
+                                <span>{{data.value}}</span>
+                            </div>
+                        </li>
+                    </ul>
+                    <div class="skills-index" :class="open" v-if="showSkills">
+                        <div class="skills-index-text">
+                            <h4>{{show.title}}</h4>
+                            <p>{{show.introduction}}</p>
+                        </div>
+                    </div>
+                    <ul class="skills-lists clearfix" v-if="showSkillsList">
+                        <li v-for="data in skills.bottom" @mouseenter="showSkillsIn(data.value)">
                             <p>{{data.name}}</p>
                             <div class="skills-value">
                                 <span>{{data.value}}</span>
@@ -69,8 +81,8 @@
             </div>
             <div class="works-list" id="works">
                 <h3>
-              <p>{{text}}</p>
-            </h3>
+                    <p>{{text}}</p>
+                </h3>
                 <div class="works-list-cont">
                     <a v-for="data in img" :class="data.size">
                         <img :src="data.url" alt="">
@@ -86,8 +98,6 @@
     </div>
     <script src="js/jquery.min.js"></script>
     <script src="js/vue.js"></script>
-    <script src="js/echarts.min.js"></script>
-    <script src="js/echarts-liquidfill.min.js"></script>
     <script src="js/common.js"></script>
 </body>
 
