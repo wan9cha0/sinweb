@@ -1,28 +1,32 @@
 /*
   vue configuration file
   vue 配置文件
-
+$ git init //初始化
+$ git add -all
+$ git commit -m 'all'
+$ git remote add origin git@github.com:defnngj/hello-world.git //连接远程github项目
+$ git push -u origin master //将本地项目更新到github项目上去
 
 */
-$(function() {
+$(function () {
     "use strict";
     // head nav cont 头部内容
     let headNav = [{
-            icon: 'icon-alarm',
-            title: 'alarm'
-        },
-        {
-            icon: 'icon-audio',
-            title: 'audio'
-        },
-        {
-            icon: 'icon-contacts',
-            title: 'contacts'
-        },
-        {
-            icon: 'icon-share',
-            title: 'share'
-        }
+        icon: 'icon-alarm',
+        title: 'alarm'
+    },
+    {
+        icon: 'icon-audio',
+        title: 'audio'
+    },
+    {
+        icon: 'icon-contacts',
+        title: 'contacts'
+    },
+    {
+        icon: 'icon-share',
+        title: 'share'
+    }
     ];
     let head = new Vue({
         el: '#heads',
@@ -35,7 +39,7 @@ $(function() {
             headImg: 'img/head.jpeg'
         },
         methods: {
-            headNavHover: function() {
+            headNavHover: function () {
                 this.show = true
             }
         }
@@ -58,36 +62,36 @@ $(function() {
             name: '这个是列表',
             skills: {
                 top: [{
-                        name: 'A',
-                        introduction: 'this is a',
-                        value: 90
-                    },
-                    {
-                        name: 'B',
-                        introduction: 'this is b',
-                        value: 80
-                    },
-                    {
-                        name: 'C',
-                        introduction: 'this is c',
-                        value: 95
-                    }
+                    name: 'A',
+                    introduction: 'this is a',
+                    value: 90
+                },
+                {
+                    name: 'B',
+                    introduction: 'this is b',
+                    value: 80
+                },
+                {
+                    name: 'C',
+                    introduction: 'this is c',
+                    value: 95
+                }
                 ],
                 bottom: [{
-                        name: 'D',
-                        introduction: 'this is d',
-                        value: 70
-                    },
-                    {
-                        name: 'E',
-                        introduction: 'this is e',
-                        value: 75
-                    },
-                    {
-                        name: 'F',
-                        introduction: 'this is f',
-                        value: 85
-                    }
+                    name: 'D',
+                    introduction: 'this is d',
+                    value: 70
+                },
+                {
+                    name: 'E',
+                    introduction: 'this is e',
+                    value: 75
+                },
+                {
+                    name: 'F',
+                    introduction: 'this is f',
+                    value: 85
+                }
                 ]
             },
             show: {
@@ -96,16 +100,16 @@ $(function() {
             },
             showSkills: true,
             showSkillsList: true,
-            open:''
+            open: ''
         },
         methods: {
-            showSkillsIn: function(data) {
+            showSkillsIn: function (data) {
                 this.showSkills = true;
                 this.showSkillsList = true;
                 this.open = 'open';
                 this.show.title = data
             },
-            showSkillsOut: function() {
+            showSkillsOut: function () {
                 this.showSkills = true;
                 this.showSkillsList = true;
                 this.open = '';
@@ -118,41 +122,41 @@ $(function() {
         data: {
             text: 'This is a list of works,This is a list of works,This is a list of works',
             img: [{
-                    url: 'img/works/works01.png',
-                    size: 'big'
-                },
-                {
-                    url: 'img/works/works04.png',
-                    size: 'middle'
-                },
-                {
-                    url: 'img/works/works02.png',
-                    size: 'big'
-                },
-                {
-                    url: 'img/works/works09.png',
-                    size: 'small'
-                },
-                {
-                    url: 'img/works/works05.png',
-                    size: 'middle'
-                },
-                {
-                    url: 'img/works/works03.png',
-                    size: 'big'
-                },
-                {
-                    url: 'img/works/works07.png',
-                    size: 'middle'
-                },
-                {
-                    url: 'img/works/works06.png',
-                    size: 'middle'
-                },
-                {
-                    url: 'img/works/works08.png',
-                    size: 'small'
-                },
+                url: 'img/works/works01.png',
+                size: 'big'
+            },
+            {
+                url: 'img/works/works04.png',
+                size: 'middle'
+            },
+            {
+                url: 'img/works/works02.png',
+                size: 'big'
+            },
+            {
+                url: 'img/works/works09.png',
+                size: 'small'
+            },
+            {
+                url: 'img/works/works05.png',
+                size: 'middle'
+            },
+            {
+                url: 'img/works/works03.png',
+                size: 'big'
+            },
+            {
+                url: 'img/works/works07.png',
+                size: 'middle'
+            },
+            {
+                url: 'img/works/works06.png',
+                size: 'middle'
+            },
+            {
+                url: 'img/works/works08.png',
+                size: 'small'
+            },
             ]
         }
     })
@@ -167,11 +171,11 @@ $(function() {
 
 // 页面动画
 
-$(document).ready(function() {
-    setTimeout(function() {
+$(document).ready(function () {
+    setTimeout(function () {
         $('.loader-index').slideUp();
     }, 2000);
-    
+
     let bannerImg = $('#banner_box');
     let changHead = $('#skills');
     let backHead = $('#restore-head');
@@ -179,7 +183,7 @@ $(document).ready(function() {
 
     bannerImg.height($(window).height());
     let before = $(window).scrollTop();
-    $(window).scroll(function() {
+    $(window).scroll(function () {
         const after = $(window).scrollTop();
         if (before < after) {
             before = after;
