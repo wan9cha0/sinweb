@@ -9,210 +9,218 @@ $ git push -u origin master //将本地项目更新到github项目上去
 
 */
 $(function () {
-    "use strict";
-    // head nav cont 头部内容
-    let headNav = [{
-        icon: 'icon-alarm',
-        title: 'alarm'
+  "use strict";
+  // head nav cont 头部内容
+  let headNav = [{
+    icon: 'icon-alarm',
+    title: 'alarm'
+  },
+  {
+    icon: 'icon-audio',
+    title: 'audio'
+  },
+  {
+    icon: 'icon-contacts',
+    title: 'contacts'
+  },
+  {
+    icon: 'icon-share',
+    title: 'share'
+  }
+  ];
+  let head = new Vue({
+    el: '#heads',
+    data: {
+      title: '王超',
+      job: 'web前端',
+      logo: '',
+      menu: false,
+      show: false,
+      nav: headNav,
+      headImg: 'img/WechatIMG6.jpeg'
     },
-    {
-        icon: 'icon-audio',
-        title: 'audio'
-    },
-    {
-        icon: 'icon-contacts',
-        title: 'contacts'
-    },
-    {
-        icon: 'icon-share',
-        title: 'share'
+    methods: {
+      headNavHover: function () {
+        this.show = true
+      }
     }
-    ];
-    let head = new Vue({
-        el: '#heads',
-        data: {
-            title: 'wishuice',
-            logo: '',
-            menu: false,
-            show: false,
-            nav: headNav,
-            headImg: 'img/head.jpeg'
+  })
+
+
+  // banner animation banner内容
+
+  let banner = new Vue({
+    el: '#banner_box',
+    data: {
+      text: '主要开发微信公众平台和pc网站，对h5页面制作有很多心得，善于使用动画，页面结构布局良好。精通jquery，正在使用vue，对新技术很有兴趣。性格乐观开朗，乐于助人，能够很好的完成团队中赋予的任务。喜欢想象思考，有自己的见解和创新意识。希望加入一个积极向上、非常有爱的团队。'
+    }
+  })
+
+  // skills lists 技能列表
+  let skills = new Vue({
+    el: '#skills',
+    data: {
+      name: '角色技能',
+      skills: {
+        top: [{
+          name: 'div+css',
+          introduction: '被动技能',
+          describe:'打怪杀敌之根本',
+          value: 95
         },
-        methods: {
-            headNavHover: function () {
-                this.show = true
-            }
-        }
-    })
-
-
-    // banner animation banner内容
-
-    let banner = new Vue({
-        el: '#banner_box',
-        data: {
-            text: "A simple introduction to the English.A simple introduction to the English.A simple introduction to the English.A simple introduction to the English."
-        }
-    })
-
-    // skills lists 技能列表
-    let skills = new Vue({
-        el: '#skills',
-        data: {
-            name: '这个是列表',
-            skills: {
-                top: [{
-                    name: 'A',
-                    introduction: 'this is a',
-                    value: 90
-                },
-                {
-                    name: 'B',
-                    introduction: 'this is b',
-                    value: 80
-                },
-                {
-                    name: 'C',
-                    introduction: 'this is c',
-                    value: 95
-                }
-                ],
-                bottom: [{
-                    name: 'D',
-                    introduction: 'this is d',
-                    value: 70
-                },
-                {
-                    name: 'E',
-                    introduction: 'this is e',
-                    value: 75
-                },
-                {
-                    name: 'F',
-                    introduction: 'this is f',
-                    value: 85
-                }
-                ]
-            },
-            show: {
-                title: '',
-                introduction: ''
-            },
-            showSkills: true,
-            showSkillsList: true,
-            open: ''
+        {
+          name: 'js ajax',
+          introduction: '主要技能',
+          describe:'页面操作，数据获取，路由控制，本地存储，动画特效。最为重要的技能之一',
+          value: 80
         },
-        methods: {
-            showSkillsIn: function (data) {
-                this.showSkills = true;
-                this.showSkillsList = true;
-                this.open = 'open';
-                this.show.title = data
-            },
-            showSkillsOut: function () {
-                this.showSkills = true;
-                this.showSkillsList = true;
-                this.open = '';
-            }
+        {
+          name: 'jquery | zepot',
+          introduction: '主要技能',
+          describe:'目前使用最多的js框架，对DOM操作非常出色，链式操作，动画特效支持比较好，扩展插件非常多',
+          value: 95
         }
-    })
-    // works
-    let works = new Vue({
-        el: '#works',
-        data: {
-            text: 'This is a list of works,This is a list of works,This is a list of works',
-            img: [{
-                url: 'img/works/works01.png',
-                size: 'big'
-            },
-            {
-                url: 'img/works/works04.png',
-                size: 'middle'
-            },
-            {
-                url: 'img/works/works02.png',
-                size: 'big'
-            },
-            {
-                url: 'img/works/works09.png',
-                size: 'small'
-            },
-            {
-                url: 'img/works/works05.png',
-                size: 'middle'
-            },
-            {
-                url: 'img/works/works03.png',
-                size: 'big'
-            },
-            {
-                url: 'img/works/works07.png',
-                size: 'middle'
-            },
-            {
-                url: 'img/works/works06.png',
-                size: 'middle'
-            },
-            {
-                url: 'img/works/works08.png',
-                size: 'small'
-            },
-            ]
+        ],
+        bottom: [{
+          name: 'vue.js',
+          describe: '目前最为流行的js框架之一，是一套构建用户界面的渐进式框架，特点是组件和路由，易上手，对项目有很大提升',
+          introduction:'特别技能',
+          value: 75
+        },
+        {
+          name: 'html5+css3',
+          describe: '主要用于动画，页面特效，本地存储，页面多媒体展示',
+          introduction:'特别技能',
+          value: 90
+        },
+        {
+          name: 'Echarts swiper等组件',
+          introduction: '其他技能',
+          describe:'常用的一些js组件',
+          value: 85
         }
-    })
-    // footer
-    let footer = new Vue({
-        el: '#foot',
-        data: {
-            text: '2017 wan9cha0'
-        }
-    });
+        ]
+      },
+      show: {
+        describe: '',
+        introduction: ''
+      },
+      showSkills: true,
+      showSkillsList: true,
+      open: ''
+    },
+    methods: {
+      showSkillsIn: function (describe,cont) {
+        this.showSkills = true;
+        this.showSkillsList = true;
+        this.open = 'open';
+        this.show.describe = describe;
+        this.show.introduction = cont;
+      },
+      showSkillsOut: function () {
+        this.showSkills = true;
+        this.showSkillsList = true;
+        this.open = '';
+      }
+    }
+  })
+  // works
+  let works = new Vue({
+    el: '#works',
+    data: {
+      text: 'This is a list of works,This is a list of works,This is a list of works',
+      img: [{
+        url: 'img/works/works01.png',
+        size: 'big'
+      },
+      {
+        url: 'img/works/works04.png',
+        size: 'middle'
+      },
+      {
+        url: 'img/works/works02.png',
+        size: 'big'
+      },
+      {
+        url: 'img/works/works09.png',
+        size: 'small'
+      },
+      {
+        url: 'img/works/works05.png',
+        size: 'middle'
+      },
+      {
+        url: 'img/works/works03.png',
+        size: 'big'
+      },
+      {
+        url: 'img/works/works07.png',
+        size: 'middle'
+      },
+      {
+        url: 'img/works/works06.png',
+        size: 'middle'
+      },
+      {
+        url: 'img/works/works08.png',
+        size: 'small'
+      },
+      ]
+    }
+  })
+  // footer
+  let footer = new Vue({
+    el: '#foot',
+    data: {
+      text: '2017 wan9cha0'
+    }
+  });
 })
 
 // 页面动画
 
 $(document).ready(function () {
-    setTimeout(function () {
-        $('.loader-index').slideUp();
-    }, 2000);
+  setTimeout(function () {
+    $('.loader-index').slideUp();
+  }, 2000);
 
-    let bannerImg = $('#banner_box');
-    let changHead = $('#skills');
-    let backHead = $('#restore-head');
-    let worksHead = $('.works-list');
+  let bannerImg = $('#banner_box');
+  let changHead = $('#skills');
+  let backHead = $('#restore-head');
+  let worksHead = $('.works-list');
 
-    bannerImg.height($(window).height());
-    let before = $(window).scrollTop();
-    $(window).scroll(function () {
-        const after = $(window).scrollTop();
-        if (before < after) {
-            before = after;
-        }
-        if (before > after) {
-            before = after;
-        }
-        if (before <= 180) {
-            $('.head-logo').removeClass('over');
-            $('.banner-sidebar').css({
-                'transform': 'rotate(' + (-.5 * before + 90) + 'deg)',
-                'opacity': 1 - before / 1000
-            });
-        } else {
-            $('.head-logo').addClass('over');
-            $('.banner-sidebar').css('transform', 'rotate(0deg)');
-        };
-        if (before > (changHead.offset().top - 100) && before < (backHead.offset().top - 50) || before > (worksHead.offset().top - 150)) {
-            $('#heads').addClass('change');
-        } else if (before > (backHead.offset().top - 50) || before < (changHead.offset().top - 50)) {
-            $('#heads').removeClass('change');
-        };
-        if (before > (changHead.offset().top - 150)) {
-            $('.tb-img').find('p').show();
-        } else {
-            $('.tb-img').find('p').hide();
-        };
-        $('.banner-text').find('p').css('transform', 'translateY(' + (.8 * before) + 'px)');
-        $('.banner-in').css('transform', 'translateY(' + (-.5 * before) + 'px)');
-    });
+  bannerImg.height($(window).height());
+  let before = $(window).scrollTop();
+  $(window).scroll(function () {
+    const after = $(window).scrollTop();
+    if (before < after) {
+      before = after;
+    }
+    if (before > after) {
+      before = after;
+    }
+    if (before <= 180) {
+      $('.head-logo').removeClass('over');
+      $('.banner-sidebar').css({
+        'transform': 'rotate(' + (-.5 * before + 90) + 'deg)',
+        'opacity': 1 - before / 1000
+      });
+    } else {
+      $('.head-logo').addClass('over');
+      $('.banner-sidebar').css('transform', 'rotate(0deg)');
+    };
+    if (before > (changHead.offset().top - 100) && before < (backHead.offset().top - 50) || before > (worksHead.offset().top - 150)) {
+      $('#heads').addClass('change');
+    } else if (before > (backHead.offset().top - 50) || before < (changHead.offset().top - 50)) {
+      $('#heads').removeClass('change');
+    };
+    if (before > (changHead.offset().top - 150)) {
+      $('.tb-img').find('p').show();
+    } else {
+      $('.tb-img').find('p').hide();
+    };
+    $('.banner-text').find('p').css('transform', 'translateY(' + (.8 * before) + 'px)');
+    $('.banner-in').css('transform', 'translateY(' + (-.5 * before) + 'px)');
+  });
 
 })

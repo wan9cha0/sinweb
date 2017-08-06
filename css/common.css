@@ -126,10 +126,14 @@ header .head-logo {
     -webkit-transform: translateX(-50%);
     transform: translateX(-50%);
 }
-
+.head-logo>span:last-of-type{
+    top:16rem;
+    font-size: 1.6rem;
+}
 .change>.head-logo>span {
     color: #666;
 }
+
 
 .head-logo.over>img {
     width: 6rem;
@@ -141,12 +145,16 @@ header .head-logo {
 .head-logo.over>span {
     font-size: 1.6rem;
     left: 12rem;
-    top: 3rem;
-    line-height: 6rem;
+    top: 4rem;
+    /* line-height: 6rem; */
     -webkit-transform: translateX(0);
     transform: translateX(0);
 }
 
+.head-logo.over>span:last-of-type{
+  top: 6.5rem;
+  font-size: 1.4rem;
+}
 .head-logo>span:hover {
     color: rgba(218, 68, 83, 1);
 }
@@ -561,15 +569,24 @@ header .head-menu.menu>p:after {
   width: 100%;
   height: 20rem;
   text-align: center;
+  font-size: 2rem;
+  color: #666;
+  padding: 1rem 2rem;
+  vertical-align: middle;
+}
+.skills-index>.skills-index-text>h4{
+  margin: 2rem 0 ;
+}
+.skills-index>.skills-index-text>p{
+  line-height: 1.5;
 }
 .skills-value {
     position: absolute;
-    width: 5rem;
+    width: 100%;
     height: 5rem;
     z-index: 11;
-    left: 50%;
+    left: 0;
     top: 50%;
-    margin-left: -2.5rem;
     margin-top: -2.5rem;
     text-align: center;
     line-height: 5rem;

@@ -18,6 +18,7 @@
         <div class="head-logo">
             <img :src="headImg" alt="">
             <span>{{title}}</span>
+            <span>{{job}}</span>
         </div>
         <div class="head-menu" :class="{menu}" @click="menu =! menu">
             <span>Menu</span>
@@ -48,24 +49,24 @@
                 <div class="cont" @mouseleave="showSkillsOut">
                     <h3>{{name}}</h3>
                     <ul class="skills-lists clearfix" v-if="showSkillsList">
-                        <li v-for="data in skills.top" @mouseenter="showSkillsIn(data.value)">
+                        <li v-for="data in skills.top" @mouseenter="showSkillsIn(data.describe,data.introduction)">
                             <p>{{data.name}}</p>
                             <div class="skills-value">
-                                <span>{{data.value}}</span>
+                                <span>技能专精：{{data.value}}</span>
                             </div>
                         </li>
                     </ul>
                     <div class="skills-index" :class="open" v-if="showSkills">
                         <div class="skills-index-text">
-                            <h4>{{show.title}}</h4>
-                            <p>{{show.introduction}}</p>
+                             <h4>{{show.introduction}}</h4> 
+                            <p>{{show.describe}}</p>
                         </div>
                     </div>
                     <ul class="skills-lists clearfix" v-if="showSkillsList">
-                        <li v-for="data in skills.bottom" @mouseenter="showSkillsIn(data.value)">
+                        <li v-for="data in skills.bottom" @mouseenter="showSkillsIn(data.describe,data.introduction)">
                             <p>{{data.name}}</p>
                             <div class="skills-value">
-                                <span>{{data.value}}</span>
+                                <span>技能专精：{{data.value}}</span>
                             </div>
                         </li>
                     </ul>
