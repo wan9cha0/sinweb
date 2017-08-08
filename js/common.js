@@ -69,13 +69,13 @@ $(function () {
           value: 95
         },
         {
-          name: 'js | ajax',
+          name: 'js | Ajax',
           introduction: '主要技能',
           describe:'页面操作，数据获取，路由控制，本地存储，动画特效。最为重要的技能之一',
           value: 80
         },
         {
-          name: 'jquery | zepot',
+          name: 'jQuery | Zepot',
           introduction: '主要技能',
           describe:'目前使用最多的js框架，对DOM操作非常出色，链式操作，动画特效支持比较好，扩展插件非常多',
           value: 95
@@ -128,44 +128,43 @@ $(function () {
   let works = new Vue({
     el: '#works',
     data: {
-      text: 'This is a list of works,This is a list of works,This is a list of works',
+      text: '作品展示',
       img: [{
-        url: 'img/works/works01.png',
-        size: 'big'
+        name:'99真爱',
+        type:'we',
+        url: 'img/wechat/WechatIMG12.jpeg',
+        erweima:'img/wechat/qrcode_Goldian_99LOVE_1.jpg'
       },
       {
+        name:'匠心到家',
+        type:'we',
         url: 'img/wechat/WechatIMG11.jpeg',
-        size: 'middle'
+        erweima:'img/wechat/WechatIMG111.jpeg'
       },
       {
+        name:'麦麦提',
+        type:'pc',
         url: 'img/pc/WechatIMG18.jpeg',
-        size: 'big'
+        link:'https://www.mmtvip.com/'
       },
       {
-        url: 'img/works/works09.png',
-        size: 'small'
-      },
-      {
+        name:'人力窝',
+        type:'we',
         url: 'img/wechat/WechatIMG15.jpeg',
-        size: 'middle'
+        erweima:'img/wechat/qrcode_wowoohr_1.jpg'
       },
       {
+        name:'青春上海',
+        type:'pc',
         url: 'img/pc/WechatIMG19.jpeg',
-        size: 'big'
+        link:'http://shyouthact.net/web/index'
       },
       {
+        name:'什么值得买',
+        type:'pc',
         url: 'img/pc/WechatIMG17.jpeg',
-        size: 'middle'
-      },
-      {
-        url: 'img/works/works06.png',
-        size: 'middle'
-      },
-      {
-        url: 'img/works/works08.png',
-        size: 'small'
-      },
-      ]
+        link:'http://lvyou.smzdm.com/'
+      }]
     }
   })
   // footer
