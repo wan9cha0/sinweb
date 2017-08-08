@@ -69,7 +69,7 @@ $(function () {
           value: 95
         },
         {
-          name: 'js ajax',
+          name: 'js | ajax',
           introduction: '主要技能',
           describe:'页面操作，数据获取，路由控制，本地存储，动画特效。最为重要的技能之一',
           value: 80
@@ -134,11 +134,11 @@ $(function () {
         size: 'big'
       },
       {
-        url: 'img/works/works04.png',
+        url: 'img/wechat/WechatIMG11.jpeg',
         size: 'middle'
       },
       {
-        url: 'img/works/works02.png',
+        url: 'img/pc/WechatIMG18.jpeg',
         size: 'big'
       },
       {
@@ -146,15 +146,15 @@ $(function () {
         size: 'small'
       },
       {
-        url: 'img/works/works05.png',
+        url: 'img/wechat/WechatIMG15.jpeg',
         size: 'middle'
       },
       {
-        url: 'img/works/works03.png',
+        url: 'img/pc/WechatIMG19.jpeg',
         size: 'big'
       },
       {
-        url: 'img/works/works07.png',
+        url: 'img/pc/WechatIMG17.jpeg',
         size: 'middle'
       },
       {
