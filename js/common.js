@@ -9,6 +9,7 @@ $ git push -u origin master //将本地项目更新到github项目上去
 
 */
 $(function () {
+  
   "use strict";
   // head nav cont 头部内容
   let headNav = [{
@@ -179,6 +180,10 @@ $(function () {
 // 页面动画
 
 $(document).ready(function () {
+  if(IsPC()===false){
+    alert('请在pc下浏览')
+    window.close()
+  }
   setTimeout(function () {
     $('.loader-index').slideUp();
   }, 2000);
@@ -223,3 +228,17 @@ $(document).ready(function () {
   });
 
 })
+function IsPC() {
+    var userAgentInfo = navigator.userAgent;
+    var Agents = ["Android", "iPhone",
+                "SymbianOS", "Windows Phone",
+                "iPad", "iPod"];
+    var flag = true;
+    for (var v = 0; v < Agents.length; v++) {
+        if (userAgentInfo.indexOf(Agents[v]) > 0) {
+            flag = false;
+            break;
+        }
+    }
+    return flag;
+}
