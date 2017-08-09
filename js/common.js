@@ -182,7 +182,7 @@ $(function () {
 $(document).ready(function () {
   if(IsPC()===false){
     alert('请在pc下浏览')
-    window.close()
+    // window.close()
   }
   setTimeout(function () {
     $('.loader-index').slideUp();
