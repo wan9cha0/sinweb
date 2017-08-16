@@ -28,7 +28,7 @@
       <div class="head-nav" v-if="menu">
         <ul class="clearfix">
           <li v-for="data in nav">
-            <div class="nav-inner">
+            <div class="nav-inner" @click="goT(data.where)">
               <h3>{{data.title}}</h3>
             </div>
           </li>
@@ -93,7 +93,7 @@
           </a>
         </div>
       </div>
-      <div class="">
+      <div class="case-cont" id="case">
         asdasd
       </div>
       <footer id="foot">

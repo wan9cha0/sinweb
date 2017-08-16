@@ -14,19 +14,23 @@ $(function () {
   // head nav cont 头部内容
   let headNav = [{
     icon: 'icon-alarm',
-    title: 'alarm'
+    title: '个人介绍',
+    where:'#banner_box'
   },
   {
     icon: 'icon-audio',
-    title: 'audio'
+    title: '技能介绍',
+    where:'#skills'
   },
   {
     icon: 'icon-contacts',
-    title: 'contacts'
+    title: '作品介绍',
+    where:'#works'
   },
   {
     icon: 'icon-share',
-    title: 'share'
+    title: '案例解析',
+    where:'#case'
   }
   ];
   let head = new Vue({
@@ -43,6 +47,11 @@ $(function () {
     methods: {
       headNavHover: function () {
         this.show = true
+      },
+      goT(s){
+        var where = $(s).offset().top;
+        $(window).scrollTop(where);
+        this.menu = false;
       }
     }
   })
@@ -53,7 +62,7 @@ $(function () {
   let banner = new Vue({
     el: '#banner_box',
     data: {
-      text: '主要开发微信公众平台和pc网站，对h5页面制作有很多心得，善于使用动画，页面结构布局良好。精通jquery，正在使用vue，对新技术很有兴趣。性格乐观开朗，乐于助人，能够很好的完成团队中赋予的任务。喜欢想象思考，有自己的见解和创新意识。希望加入一个积极向上、非常有爱的团队。'
+      text: '主要开发微信公众平台和pc网站，对h5页面制作有很多心得，善于使用动画，页面结构布局良好。精通jquery，Ajax，html5+css3，熟练掌握vue+webpack，对新技术很有兴趣。性格乐观开朗，乐于助人，能够很好的完成团队中赋予的任务。喜欢想象思考，有自己的见解和创新意识。希望加入一个积极向上、非常有爱的团队。'
     }
   })
 
